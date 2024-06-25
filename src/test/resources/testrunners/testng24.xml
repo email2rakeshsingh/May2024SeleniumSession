@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Regression Suite" parallel="tests" thread-count="3" verbose="4">
+	<test name="Amazon Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.amazon.in/ref=nav_logo" />
+		<classes>
+			<class name="mytest.com.AmazonTest" />
+		</classes>
+	</test>
+
+	<test name="AskApplication Test">
+		<parameter name="browser" value="edge" />
+		<parameter name="url" value="https://www.fromdoctopdf.com/" />
+		<classes>
+			<class name="mytest.com.AskApplication" />
+		</classes>
+	</test>
+
+	<test name="GoogleTest Login Test">
+		<parameter name="browser" value=" chrome" />
+		<parameter name="url" value="https://www.google.com/" />
+		<classes>
+			<class name="mytest.com.GoogleTest" />
+		</classes>
+	</test>
+</suite>
