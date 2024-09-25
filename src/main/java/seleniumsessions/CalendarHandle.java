@@ -4,15 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class CalendarHandle {
 
 	static WebDriver driver;
 
 	public static void main(String[] args) {
 
-		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html");
 

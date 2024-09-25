@@ -1,18 +1,17 @@
 package seleniumsessions;
 
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 public class PaginationConcept {
 	static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
 
-		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://selectorshub.com/xpath-practice-page/");
 
@@ -43,7 +42,7 @@ public class PaginationConcept {
 	}
 
 	public static void selctCityByRelative(String name) {
-		WebElement element = driver.findElement(By.xpath("//td[text()='"+ name +"']"));
+		WebElement element = driver.findElement(By.xpath("//td[text()='" + name + "']"));
 		driver.findElement(with(By.xpath("//input[@type='checkbox']")).toLeftOf(element)).click();
 
 	}

@@ -9,14 +9,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class AppLoginTest {
 	WebDriver driver;
 
 	@BeforeTest
 	public void AppLogin() {
-		WebDriverManager.chromedriver().setup();
+
 		driver = new ChromeDriver();
 		driver.get("https://www.amazon.in/ref=nav_logo");
 		driver.manage().deleteAllCookies();
@@ -26,8 +24,9 @@ public class AppLoginTest {
 	@Test
 	public void titleTest() {
 		String titleString = driver.getTitle();
-    	System.out.println(titleString);
-     	Assert.assertEquals(titleString, "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
+		System.out.println(titleString);
+		Assert.assertEquals(titleString,
+				"Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
 
 	}
 
@@ -35,7 +34,7 @@ public class AppLoginTest {
 	public void getUrlTest() {
 		String getURLString = driver.getCurrentUrl();
 		System.out.println(getURLString);
-    	Assert.assertEquals(getURLString, "https://www.amazon.in/ref=nav_logo");
+		Assert.assertEquals(getURLString, "https://www.amazon.in/ref=nav_logo");
 
 	}
 
@@ -43,7 +42,7 @@ public class AppLoginTest {
 	public void buttonPrentTest() {
 		WebElement searcButtonElement = driver.findElement(By.xpath("//input[@id='nav-search-submit-button']"));
 		System.out.println(searcButtonElement);
- 		Assert.assertTrue(searcButtonElement.isDisplayed());
+		Assert.assertTrue(searcButtonElement.isDisplayed());
 	}
 
 	@AfterTest

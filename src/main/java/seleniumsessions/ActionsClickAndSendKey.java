@@ -6,14 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class ActionsClickAndSendKey {
 	static WebDriver driver;
 
 	public static void main(String[] args) {
 
-		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://www.orangehrm.com/en/30-day-free-trial");
 //		Actions act = new Actions(driver);
@@ -22,8 +19,7 @@ public class ActionsClickAndSendKey {
 		By email = By.id("Form_getForm_Email");
 		By nameBy = By.id("Form_getForm_Name");
 		By phone = By.id("Form_getForm_Contact");
-		By buttonClick = By.xpath(
-				"//div[@class='footer-main']//a[contains(text(),'Careers')]");
+		By buttonClick = By.xpath("//div[@class='footer-main']//a[contains(text(),'Careers')]");
 //		doActionsSendKeys(nameBy, "Rakesh ji ");
 //		doActionsSendKeys(email, "email2rakeshsingh@gmail.com");
 //		doActionsSendKeys(phone, "95468562");

@@ -6,15 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class SelectDropDownHandel {
 
 	static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
 
-		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get(
 				"https://www.orangehrm.com/en/contact-sales/?_gl=1*ti1kme*_up*MQ..*_ga*MTY2MjE5ODQ1NC4xNzE2NjI4OTc3*_ga_6C6T9MXTRT*MTcxNjYyODk3Ny4xLjAuMTcxNjYyODk3Ny4wLjAuMTY5OTk3ODI4NQ..");

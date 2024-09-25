@@ -1,12 +1,11 @@
 package mytest.com;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AmazonTest extends BaseTest {
 
@@ -31,7 +30,7 @@ public class AmazonTest extends BaseTest {
 
 	@Test
 	public void addToCard() {
-		WebDriverManager.chromedriver().setup();
+
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/ref=nav_logo");
@@ -47,7 +46,7 @@ public class AmazonTest extends BaseTest {
 		String addCartTitle = driver.getTitle();
 		System.out.println(addCartTitle);
 		Assert.assertTrue(addCartTitle.contains("Apple "));
-	
+
 	}
 
 }

@@ -5,8 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class BrowserUtil implements Util {
 
 	public WebDriver driver;
@@ -15,15 +13,12 @@ public class BrowserUtil implements Util {
 
 		System.out.println("Browser name is :" + browserName);
 		if (browserName.equalsIgnoreCase(CHROME_BROWSER)) {
-			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 
 		} else if (browserName.equalsIgnoreCase(FIREFOX_BROWSER)) {
-			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 
 		} else if (browserName.equalsIgnoreCase(EDGE_BROWSER)) {
-			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		} else {
 			System.out.println("please right the correct browsers :" + browserName);

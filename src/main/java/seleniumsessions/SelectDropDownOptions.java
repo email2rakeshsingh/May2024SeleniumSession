@@ -3,16 +3,11 @@ package seleniumsessions;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
-import com.github.dockerjava.api.model.Driver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SelectDropDownOptions {
 
@@ -20,7 +15,6 @@ public class SelectDropDownOptions {
 
 	public static void main(String[] args) {
 
-		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get(
 				"https://www.orangehrm.com/en/contact-sales/?_gl=1*ti1kme*_up*MQ..*_ga*MTY2MjE5ODQ1NC4xNzE2NjI4OTc3*_ga_6C6T9MXTRT*MTcxNjYyODk3Ny4xLjAuMTcxNjYyODk3Ny4wLjAuMTY5OTk3ODI4NQ..");

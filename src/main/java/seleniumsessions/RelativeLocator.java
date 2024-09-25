@@ -1,18 +1,16 @@
 package seleniumsessions;
 
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import static org.openqa.selenium.support.locators.RelativeLocator.with;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class RelativeLocator {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		WebDriverManager.chromiumdriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.aqi.in/dashboard/india");
 		Thread.sleep(8000);
@@ -29,7 +27,7 @@ public class RelativeLocator {
 
 		String avobeString = driver.findElement(with(By.tagName("p")).above(ele)).getText();
 		System.out.println(avobeString);
-		
+
 		String nearString = driver.findElement(with(By.tagName("p")).above(ele)).getText();
 		System.out.println(nearString);
 	}

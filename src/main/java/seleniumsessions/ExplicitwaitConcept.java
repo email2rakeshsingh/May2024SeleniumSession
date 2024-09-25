@@ -9,14 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class ExplicitwaitConcept {
 	static WebDriver driver;
 
 	public static void main(String[] args) {
 		// Setup WebDriver and open browser
-		WebDriverManager.chromedriver().setup();
+
 		driver = new ChromeDriver();
 
 		// Open the target URL

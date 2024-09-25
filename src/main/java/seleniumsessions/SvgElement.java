@@ -1,4 +1,7 @@
 package seleniumsessions;
+
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -6,13 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import java.util.List;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class SvgElement {
 	public static void main(String[] args) throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
+
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://petdiseasealerts.org/forecast-map#/");
@@ -37,14 +36,12 @@ public class SvgElement {
 		// Use Actions to perform actions on elements
 		Actions actions = new Actions(driver);
 		for (WebElement e : statesList) {
-		
-				actions.moveToElement(e).perform();
-				String name = e.getAttribute("name");
-				System.out.println(name);
 
-			
-			}
+			actions.moveToElement(e).perform();
+			String name = e.getAttribute("name");
+			System.out.println(name);
+
 		}
-
 	}
 
+}

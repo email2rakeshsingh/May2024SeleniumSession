@@ -1,7 +1,5 @@
 package seleniumsessions;
 
-import org.apache.commons.codec.language.bm.Rule;
-
 public class AmazonTest {
 
 	public static void main(String[] args) {
