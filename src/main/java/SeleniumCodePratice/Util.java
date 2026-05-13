@@ -3,8 +3,8 @@ package SeleniumCodePratice;
 public interface Util {
 
 	String CHROME_BROWSER = "chrome";
-	String fIREFOX_BROWSER = "fIREFOX";
-	String sAFARI_BROWSER = "safari";
+	String FIREFOX_BROWSER = "firefox";
+	String SAFARI_BROWSER = "safari";
 
 	public void navigateURL(String url);
 

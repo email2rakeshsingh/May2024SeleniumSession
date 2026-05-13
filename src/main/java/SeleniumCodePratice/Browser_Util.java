@@ -12,14 +12,18 @@ public class Browser_Util implements Util {
 	public WebDriver Init_driver(String Browsername) {
 
 		System.out.println(Browsername);
+		if (Browsername == null || Browsername.trim().isEmpty()) {
+			System.out.println("Please enter a non-empty browser name.");
+			return null;
+		}
 
-		if (Browsername.equals(CHROME_BROWSER)) {
+		if (Browsername.equalsIgnoreCase(CHROME_BROWSER)) {
 			driver = new ChromeDriver();
 
-		} else if (Browsername.equals(fIREFOX_BROWSER)) {
+		} else if (Browsername.equalsIgnoreCase(FIREFOX_BROWSER)) {
 			driver = new FirefoxDriver();
 
-		} else if (Browsername.equals(sAFARI_BROWSER)) {
+		} else if (Browsername.equalsIgnoreCase(SAFARI_BROWSER)) {
 			driver = new SafariDriver();
 
 		} else {
